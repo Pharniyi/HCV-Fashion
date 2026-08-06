@@ -9,84 +9,84 @@ const products = [
     name: "Heritage Corduroy Jacket",
     category: "Jacket",
     price: "₦ 32,000.00",
-    image: "/Corduroy Jacket.jpg",
+    image: "men/Corduroy Jacket.jpg",
   },
   {
     id: 2,
     name: "Ethnic Pattern Silk Shirt",
     category: "Shirt",
     price: "₦ 18,500.00",
-    image: "/Pattern_Shirt.jpg",
+    image: "men/Pattern_Shirt.jpg",
   },
   {
     id: 3,
     name: "Tan Argyle Knit Vest",
     category: "Knitwear",
     price: "₦ 14,500.00",
-    image: "/Sweater V-neck.jpg",
+    image: "men/Sweater V-neck.jpg",
   },
   {
     id: 4,
     name: "Vertical Stripe Knit Polo",
     category: "Polo",
     price: "₦ 16,000.00",
-    image: "/vertical_stripe_knit_polo.jpg",
+    image: "men/vertical_stripe_knit_polo.jpg",
   },
   {
     id: 5,
     name: "Palm Tree Summer Shirt",
     category: "Shirt",
     price: "₦ 12,000.00",
-    image: "/Palm Tree Shirt.jpg",
+    image: "men/Palm Tree Shirt.jpg",
   },
   {
     id: 6,
     name: "Tailored Wool Trousers",
     category: "Trousers",
     price: "₦ 24,000.00",
-    image: "/tailored_wool_trouser.jpg",
+    image: "men/tailored_wool_trouser.jpg",
   },
   {
     id: 7,
     name: "Green Stripe Polo",
     category: "Polo",
     price: "₦ 28,000.00",
-    image: "/green_stripe_polo.jpg",
+    image: "men/green_stripe_polo.jpg",
   },
   {
     id: 8,
     name: "Sweatshirt",
     category: "Jacket",
     price: "₦ 19,500.00",
-    image: "/sweatshirt.jpg",
+    image: "men/sweatshirt.jpg",
   },
   {
     id: 9,
     name: "Summer Linen Shorts",
     category: "Shorts",
     price: "₦ 32,000.00",
-    image: "/men's vintage shorts.jpg",
+    image: "men/men's vintage shorts.jpg",
   },
   {
     id: 10,
     name: "Red stripe polo",
     category: "Polo",
     price: "₦ 12,000.00",
-    image: "/red stripe polo.jpg",
+    image: "men/red stripe polo.jpg",
   },
   {
     id: 11,
     name: "Cross shorts",
     category: "Shorts",
     price: "₦ 32,000.00",
-    image: "/cross short.jpg",
+    image: "men/cross short.jpg",
   },
   {
     id: 12,
     name: "Black trouser",
     category: "Trousers",
     price: "₦ 32,000.00",
-    image: "/Black trouser.jpg",
+    image: "men/Black trouser.jpg",
   },
 ];
 
@@ -119,7 +119,7 @@ const MenPage = () => {
       {/* Hero Section */}
       <section
         className="relative h-[80vh] bg-cover bg-center"
-        style={{ backgroundImage: "url('/men_hero_section.png')" }}
+        style={{ backgroundImage: "url('men/men_hero_section.png')" }}
       >
         <div className="absolute inset-0 bg-black/40"></div>
         <div className="relative z-10 h-full flex flex-col justify-center items-center text-white text-center px-4">

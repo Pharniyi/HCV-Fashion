@@ -6,10 +6,156 @@ import { Link } from 'react-router-dom'
 const products = [
   {
     id: 1,
-    name: "Floral Print Maxi Dress",
-    category: "Dress",
+    name: "Classic black gown",
+    category: "Gowns",
+    price: "₦ 15,000.00",
+    image: "women/black gown.jpg",
+  },
+
+  {
+    id: 2,
+    name: "Ethereal browngown",
+    category: "Gowns",
+    price: "₦ 15,000.00",
+    image: "women/brown gown.jpg",
+  },
+
+  {
+    id: 3,
+    name: "Silk navy shirt",
+    category: "Shirts",
+    price: "₦ 9,000.00",
+    image: "women/silk shirt.jpg",
+  },
+
+  {
+    id: 4,
+    name: "Sculpted ash blazer",
+    category: "Blazers",
+    price: "₦ 28,000.00",
+    image: "women/ash blazer.jpg",
+  },
+
+  {
+    id: 5,
+    name: "Wide leg pant trousers",
+    category: "Trousers",
+    price: "₦ 10,000.00",
+    image: "women/wide leg pant trouser.jpg",
+  },
+
+  {
+    id: 6,
+    name: "Pleated ash trouser",
+    category: "Trousers",
+    price: "₦ 15,000.00",
+    image: "women/ash pant trouser.jpg",
+  },
+
+  {
+    id: 7,
+    name: "Tiered black skirt",
+    category: "Skirts",
+    price: "₦ 10,000.00",
+    image: "women/black skirt.jpg",
+  },
+
+  {
+    id: 8,
+    name: "Denim cargo trouser",
+    category: "Trousers",
+    price: "₦ 15,000.00",
+    image: "women/jeans trouser.jpg",
+  },
+
+  {
+    id: 9,
+    name: "Baggy indigo jeans",
+    category: "Trousers",
     price: "₦ 25,000.00",
+    image: "women/baggy jeans.jpg",
+  },
+  {
+    id: 10,
+    name: "Wine boat neck top",
+    category: "Tops",
+    price: "₦ 10,000.00",
+    image: "women/wine top.jpg",
+  },
+  
+  {
+    id: 11,
+    name: "Stripped cropped shirt",
+    category: "Shirts",
+    price: "₦ 10,000.00",
+    image: "women/crop shirt.jpg",
+  },
+  {
+    id: 12,
+    name: "Turtle neck",
+    category: "Tops",
+    price: "₦ 8,000.00",
+    image: "women/turtle neck.jpg",
+  },
+  {
+    id: 13,
+    name: "Basic top",
+    category: "Tops",
+    price: "₦ 7,000.00",
+    image: "women/brown basic top.jpg",
+  },
+  {
+    id: 14,
+    name: "Jean Knicker",
+    category: "Shorts",
+    price: "₦ 15,000.00",
+    image: "women/female short.jpg",
+  },
+  {
+    id: 15,
+    name: "Turtle neck",
+    category: "Tops",
+    price: "₦ 10,000.00",
+    image: "women/thick turtle neck.jpg",
+  },
+  {
+    id: 16,
+    name: "Cargo jean trouser",
+    category: "Trousers",
+    price: "₦ 10,000.00",
+    image: "women/wide leg cargo jeans.jpg",
+  },
+
+  {
+    id: 17,
+    name: "Checkers shirt",
+    category: "Shirts",
+    price: "₦ 8,000.00",
+    image: "women/checkers shirt.jpg",
+  },
+  {
+    id: 18,
+    name: "Round neck",
+    category: "Tops",
+    price: "₦ 7,000.00",
+    image: "women/round neck.jpg",
+  },
+  {
+    id: 19,
+    name: "Jean trouser",
+    category: "Trousers",
+    price: "₦ 20,000.00",
+    image: "women/ash jeans.jpg"
+  },
+  {
+    id: 20,
+    name: "Shirt",
+    category: "Shirts",
+    price: "₦ 10,000.00",
+    image: "women/shirt.png"
   }
+
+
 ]
 const WomenPage = () => {
   const [selectedCategory, setSelectedCategory] = useState('All');
@@ -38,7 +184,7 @@ const WomenPage = () => {
       <div className="min-h-screen">
   
         {/* Hero Section */}
-        <section className="relative h-[80vh] bg-cover bg-center" style={{backgroundImage: "url('/women-hero.png')"}}>
+        <section className="relative h-[80vh] bg-cover bg-center" style={{backgroundImage: "url('women/women-hero.png')"}}>
           <div className="absolute inset-0 bg-black/40"></div>
               <div className="relative z-10 h-full flex flex-col justify-center items-center text-white text-center px-4">
                   <h1 className="text-6xl font-serif font-semibold mb-4">
@@ -63,10 +209,11 @@ const WomenPage = () => {
   
               <div className="flex gap-5">
                 <button onClick={() => setSelectedCategory("All")} className={`px-3 py-1 ${selectedCategory === "All" ? "bg-black text-white" : "text-black"}`}>All</button>
-                <button onClick={() => setSelectedCategory("Shirt")} className={`px-3 py-1 ${selectedCategory === "Shirt" ? "bg-black text-white" : "text-black"}`}>Shirt</button>
-                <button onClick={() => setSelectedCategory("Jacket")} className={`px-3 py-1 ${selectedCategory === "Jacket" ? "bg-black text-white" : "text-black"}`}>Jacket</button>
-                <button onClick={() => setSelectedCategory("Polo")} className={`px-3 py-1 ${selectedCategory === "Polo" ? "bg-black text-white" : "text-black"}`}>Polo</button>
-                <button onClick={() => setSelectedCategory("Knitwear")} className={`px-3 py-1 ${selectedCategory === "Knitwear" ? "bg-black text-white" : "text-black"}`}>Knitwear</button>
+                <button onClick={() => setSelectedCategory("Gowns")} className={`px-3 py-1 ${selectedCategory === "Gowns" ? "bg-black text-white" : "text-black"}`}>Gowns</button>
+                <button onClick={() => setSelectedCategory("Shirts")} className={`px-3 py-1 ${selectedCategory === "Shirts" ? "bg-black text-white" : "text-black"}`}>Shirts</button>
+                <button onClick={() => setSelectedCategory("Blazers")} className={`px-3 py-1 ${selectedCategory === "Blazers" ? "bg-black text-white" : "text-black"}`}>Blazers</button>
+                <button onClick={() => setSelectedCategory("Tops")} className={`px-3 py-1 ${selectedCategory === "Tops" ? "bg-black text-white" : "text-black"}`}>Tops</button>
+                <button onClick={() => setSelectedCategory("Skirts")} className={`px-3 py-1 ${selectedCategory === "Skirts" ? "bg-black text-white" : "text-black"}`}>Skirts</button>
                 <button onClick={() => setSelectedCategory("Trousers")} className={`px-3 py-1 ${selectedCategory === "Trousers" ? "bg-black text-white" : "text-black"}`}>Trousers</button>
                 <button onClick={() => setSelectedCategory("Shorts")} className={`px-3 py-1 ${selectedCategory === "Shorts" ? "bg-black text-white" : "text-black"}`}>Shorts</button>
               </div>
@@ -102,7 +249,10 @@ const WomenPage = () => {
                     className="w-full h-90 object-cover hover:scale-105 transition duration-500"
                   />
                 </div>
-  
+              
+              <p className="mt-4 text-xs uppercase tracking-widest text-gray-500">
+                {product.category}
+              </p>
                 <h3 className="mt-4 text-sm">{product.name}</h3>
   
                 <p className="mt-1 text-xl">{product.price}</p>
