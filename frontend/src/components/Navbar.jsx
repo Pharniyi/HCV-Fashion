@@ -42,6 +42,11 @@ const Navbar = () => {
             Kids
           </NavLink>
 
+          <NavLink to="/newarrivals" className={({ isActive }) => `text-black pb-1 border-b-2 transition-all duration-200 ${
+            isActive ? "border-black" : "border-transparent "}`}>
+            New Arrivals
+          </NavLink>
+
           <NavLink to="/aboutus" className={({ isActive }) => `text-black pb-1 border-b-2 transition-all duration-200 ${
             isActive ? "border-black" : "border-transparent "}`}>
             About Us

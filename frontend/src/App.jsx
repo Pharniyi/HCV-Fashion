@@ -8,6 +8,7 @@ import ProfilePage from './pages/ProfilePage'
 import MenPage from './pages/MenPage'
 import WomenPage from './pages/WomenPage'
 import KidsPage from './pages/KidsPage'
+import NewArrivalsPage from './pages/NewArrivalsPage'
 import AboutUsPage from './pages/AboutUsPage'
 import ContactPage from './pages/ContactPage'
 import {Routes, Route, useLocation} from 'react-router-dom'
@@ -28,6 +29,7 @@ const App = () => {
         <Route path='/men' element= {<MenPage/>} />
         <Route path='/women' element= {<WomenPage/>} />
         <Route path='/kids' element= {<KidsPage/>} />
+        <Route path='/newarrivals' element= {<NewArrivalsPage/>} />
         <Route path='/aboutus' element= {<AboutUsPage/>} />
         <Route path='/contact' element= {<ContactPage/>} />
       </Routes>
