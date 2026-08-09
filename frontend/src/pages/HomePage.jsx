@@ -104,7 +104,7 @@ const HomePage = () => {
             <div key={index}>
               <div className="relative">
                 <span className="absolute top-3 left-3 bg-black text-white text-xs px-2 py-1">
-                  
+                  NEW
                 </span>
 
                 <img
