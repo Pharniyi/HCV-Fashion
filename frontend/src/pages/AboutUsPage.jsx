@@ -212,7 +212,6 @@ const AboutUsPage = () => {
               </button>
             </div>
 
-            {/* Dynamic Content */}
             <h3 className="mt-10 text-2xl font-serif">
               {tabContent[activeTab].heading}
             </h3>
