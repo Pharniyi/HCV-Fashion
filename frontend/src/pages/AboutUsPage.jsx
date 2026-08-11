@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { CheckCircle, Briefcase, FileText, Users, Trophy } from "lucide-react";
 import Footer from "../components/Footer";
 
@@ -36,6 +36,33 @@ const AboutUsPage = () => {
     },
   ];
 
+  const tabContent = {
+    mission: {
+      label: "OUR MISSION",
+      title: "Making great fashion",
+      subtitle: "accessible to everyone",
+      heading: "Our Fashion Mission",
+      text: "To provide stylish, quality, and affordable ready-to-wear clothing for men, women, and kids while giving our customers a convenient and enjoyable shopping experience.",
+    },
+
+    vision: {
+      label: "OUR VISION",
+      title: "Taking fashion",
+      subtitle: "beyond the physical store",
+      heading: "Our Fashion Vision",
+      text: "To take HCV Fashion Hub from a trusted fashion retailer with over 20 years of experience to a leading online fashion destination.",
+    },
+
+    goal: {
+      label: "OUR GOAL",
+      title: "Making fashion",
+      subtitle: "accessible across Nigeria",
+      heading: "Our Fashion Goal",
+      text: "To make our wide range of ready-made fashion accessible to more customers across Nigeria through a convenient and reliable online shopping experience.",
+    },
+  };
+
+  const [activeTab, setActiveTab] = useState("mission");
   return (
     <>
       {/* Hero Section */}
@@ -69,7 +96,11 @@ const AboutUsPage = () => {
             </div>
 
             <div className="absolute top-45 left-45 w-65 h-45 rounded-3xl overflow-hidden ">
-              <img src="aboutus/aboutus1.jpg" alt="" className="w-full h-full object-cover" />
+              <img
+                src="aboutus/aboutus1.jpg"
+                alt=""
+                className="w-full h-full object-cover"
+              />
             </div>
           </div>
 
@@ -131,46 +162,78 @@ const AboutUsPage = () => {
       {/* Our Mission */}
       <section className="max-w-7xl mx-auto px-6 py-24">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
-          <div style={{color:'#6a4827'}}>
-            <p className="text-xs tracking-widest font-semibold">OUR MISSION</p>
+          {/* Content */}
+          <div style={{ color: "#6a4827" }}>
+            <p className="text-xs tracking-widest font-semibold">
+              {tabContent[activeTab].label}
+            </p>
+
             <h2 className="mt-4 text-5xl font-serif leading-tight">
-              Making great fashion
+              {tabContent[activeTab].title}
+
               <span className="italic block">
-                accessible to everyone
+                {tabContent[activeTab].subtitle}
               </span>
             </h2>
 
+            {/* Buttons */}
             <div className="flex gap-4 flex-wrap">
-              <button className="mt-10 bg-[#6a4827] text-white px-8 py-4 rounded-full hover:bg-[#A88540]">
-              OUR MISSION
-            </button>
+              <button
+                onClick={() => setActiveTab("mission")}
+                className={`mt-10 px-8 py-4 rounded-full transition ${
+                  activeTab === "mission"
+                    ? "bg-[#6a4827] text-white"
+                    : "bg-gray-100 text-[#6a4827]"
+                }`}
+              >
+                OUR MISSION
+              </button>
 
-              <button className="mt-10 bg-[#6a4827] text-white px-8 py-4 rounded-full hover:bg-[#A88540]">
-              OUR VISION
-            </button>
+              <button
+                onClick={() => setActiveTab("vision")}
+                className={`mt-10 px-8 py-4 rounded-full transition ${
+                  activeTab === "vision"
+                    ? "bg-[#6a4827] text-white"
+                    : "bg-gray-100 text-[#6a4827]"
+                }`}
+              >
+                OUR VISION
+              </button>
 
-              <button className="mt-10 bg-[#6a4827] text-white px-8 py-4 rounded-full hover:bg-[#A88540]">
-              OUR GOAL
-            </button>
+              <button
+                onClick={() => setActiveTab("goal")}
+                className={`mt-10 px-8 py-4 rounded-full transition ${
+                  activeTab === "goal"
+                    ? "bg-[#6a4827] text-white"
+                    : "bg-gray-100 text-[#6a4827]"
+                }`}
+              >
+                OUR GOAL
+              </button>
             </div>
 
-            <h3 className="mt-10 text-2xl font-serif">Our Fashion Mission</h3>
-            <p className="mt-5 text-gray-500 leading-8"> For over 20 years, HCV Fashion Hub has been providing
-        customers with stylish and affordable ready-to-wear
-        clothing. Our mission is to make it easy for everyone
-        to find clothing they love, with a wide selection of
-        fashionable styles for men, women, and kids.</p>
+            {/* Dynamic Content */}
+            <h3 className="mt-10 text-2xl font-serif">
+              {tabContent[activeTab].heading}
+            </h3>
 
+            <p className="mt-5 text-gray-500 leading-8">
+              {tabContent[activeTab].text}
+            </p>
           </div>
 
-          {/*Image section*/}
+          {/* Image */}
           <div className="overflow-hidden rounded-3xl">
-            <img src="aboutus/mission.jpg" alt="" className="w-full h-[450px] object-cover"/>
+            <img
+              src="/aboutus/mission.jpg"
+              alt="HCV Fashion Hub"
+              className="w-full h-[450px] object-cover"
+            />
           </div>
         </div>
       </section>
 
-      <Footer/>
+      <Footer />
     </>
   );
 };
