@@ -128,6 +128,8 @@ const ContactPage = () => {
             <p className="mt-4">Shop the latest trends for men, women, and kids.</p>
           </div>
         </div>
+
+        <div></div>
       </section>
     </>
   );
