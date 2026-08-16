@@ -144,7 +144,7 @@ const ContactPage = () => {
             </a>
 
             <a href="#" className="flex items-center gap-2 bg-black border border-white/30 rounded-lg px-3 py-2 text-white transition-all duration-200 hover:scale-105 hover:bg-gray-900 active:scale-95">
-              <img src="contactus/google-play.png" alt="Download on Google Play" className="h-8 md:h-9 w-auto object-contain"/>
+              <img src="contactus/app-store.png" alt="Download on Google Play" className="h-8 md:h-9 w-auto object-contain"/>
               <p>Download on <span className="block">App Store</span></p>
             </a>
           </div>
