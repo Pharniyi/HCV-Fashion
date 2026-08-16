@@ -136,24 +136,53 @@ const ContactPage = () => {
             </p>
 
             {/* App Store Buttons */}
-          <div className="flex items-center gap-3 mt-5">
-            
-            <a href="#" className="flex items-center gap-2 bg-black border border-white/30 rounded-lg px-3 py-2 text-white transition-all duration-200 hover:scale-105 hover:bg-gray-900 active:scale-95">
-              <img src="contactus/google-play.png" alt="Download on Google Play" className="h-8 md:h-9 w-auto object-contain"/>
-              <p>GET IT ON <span className="block">Google Play</span></p>
-            </a>
+            <div className="flex items-center gap-3 mt-5">
+              <a
+                href="#"
+                className="flex items-center gap-2 bg-black border border-white/30 rounded-lg px-3 py-2 text-white transition-all duration-200 hover:scale-105 hover:bg-gray-900 active:scale-95"
+              >
+                <img
+                  src="contactus/google-play.png"
+                  alt="Download on Google Play"
+                  className="h-8 md:h-9 w-auto object-contain"
+                />
+                <p>
+                  GET IT ON <span className="block">Google Play</span>
+                </p>
+              </a>
 
-            <a href="#" className="flex items-center gap-2 bg-black border border-white/30 rounded-lg px-3 py-2 text-white transition-all duration-200 hover:scale-105 hover:bg-gray-900 active:scale-95">
-              <img src="contactus/app-store.png" alt="Download on Google Play" className="h-8 md:h-9 w-auto object-contain"/>
-              <p>Download on <span className="block">App Store</span></p>
-            </a>
-          </div>
-
+              <a
+                href="#"
+                className="flex items-center gap-2 bg-black border border-white/30 rounded-lg px-3 py-2 text-white transition-all duration-200 hover:scale-105 hover:bg-gray-900 active:scale-95"
+              >
+                <img
+                  src="contactus/app-store.png"
+                  alt="Download on App Store"
+                  className="h-8 md:h-9 w-auto object-contain"
+                />
+                <p>
+                  Download on <span className="block">App Store</span>
+                </p>
+              </a>
+            </div>
           </div>
         </div>
       </section>
 
-      <Footer/>
+      <section className="max-w-7xl mx-auto px-6 pb-20">
+        <div className="overflow-hidden rounded-lg border border-[#d9c3a3] shadow-sm">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3956.697855269258!2d3.977522774002992!3d7.387715692621958!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1039937b4015202d%3A0xceca82384fac40a3!2sBola%20Ige%20International%20Market%2C%20Old%20Ife%20Rd%2C%20Ibadan%20200103%2C%20Oyo!5e0!3m2!1sen!2sng!4v1786921242146!5m2!1sen!2sng"
+            title="HCV Fashion Hub location"
+            className="w-full h-[350px] md:h-[450px] border-0"
+            allowFullScreen=""
+            loading="lazy"
+            referrerPolicy="strict-origin-when-cross-origin"
+          />
+        </div>
+      </section>
+
+      <Footer />
     </>
   );
 };
