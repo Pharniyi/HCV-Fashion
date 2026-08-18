@@ -122,7 +122,7 @@ const ContactPage = () => {
       {/*Banner Section */}
       <section className="max-w-7xl mx-auto px-6 py-5">
         <div
-          className="h-[300px] rounded-lg overflow-hidden relative bg-cover "
+          className="h-75 rounded-lg overflow-hidden relative bg-cover "
           style={{ backgroundImage: "url('contactus/contactus-banner.png')" }}
         >
           <div className="absolute inset-0 bg-black/40"></div>
@@ -174,7 +174,7 @@ const ContactPage = () => {
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3956.697855269258!2d3.977522774002992!3d7.387715692621958!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1039937b4015202d%3A0xceca82384fac40a3!2sBola%20Ige%20International%20Market%2C%20Old%20Ife%20Rd%2C%20Ibadan%20200103%2C%20Oyo!5e0!3m2!1sen!2sng!4v1786921242146!5m2!1sen!2sng"
             title="HCV Fashion Hub location"
-            className="w-full h-[350px] md:h-[450px] border-0"
+            className="w-full h-87.5 md:h-112.5 border-0"
             allowFullScreen=""
             loading="lazy"
             referrerPolicy="strict-origin-when-cross-origin"

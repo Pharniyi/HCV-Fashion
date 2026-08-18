@@ -226,7 +226,7 @@ const AboutUsPage = () => {
             <img
               src="/aboutus/mission.jpg"
               alt="HCV Fashion Hub"
-              className="w-full h-[450px] object-cover"
+              className="w-full h-112.5 object-cover"
             />
           </div>
         </div>
