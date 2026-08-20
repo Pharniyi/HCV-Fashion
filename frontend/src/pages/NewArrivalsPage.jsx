@@ -316,8 +316,6 @@ const NewArrivalsPage = () => {
                     {/* Product Details */}
                     <div>
 
-                      
-
                       <h2 className="mb-2 text-[13px] font-medium text-gray-900 md:text-[14px]">
                         {product.name}
                       </h2>
@@ -336,7 +334,7 @@ const NewArrivalsPage = () => {
 
             ) : (
 
-              <div className="flex min-h-[400px] items-center justify-center border border-gray-200">
+              <div className="flex min-h-100 items-center justify-center border border-gray-200">
                 <div className="text-center">
                   <h3 className="mb-2 font-serif text-2xl">
                     No products found
