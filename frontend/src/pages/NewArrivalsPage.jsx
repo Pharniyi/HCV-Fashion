@@ -133,8 +133,8 @@ const NewArrivalsPage = () => {
   return (
     <>
       {/*Heading*/}
-      <section className="py-20 px-6">
-        <div className="mx-auto max-w-7xl px-6 py-4 lg:px-10">
+      <section className="pt-20 pb-5">
+        <div className="mx-auto max-w-7xl px-6 py-4 lg:px-8">
           <div className="mb-8">
             <p
               className="mb-2 text-[11px] font-medium uppercase "
@@ -175,192 +175,161 @@ const NewArrivalsPage = () => {
       </section>
 
       {/*Content*/}
-      <div className="grid grid-cols-1 gap-8 lg:grid-cols-[250px_1fr] max-w-7xl">
+      <div className="ps-8 pe-6">
+        <div className="grid grid-cols-1 gap-8 lg:grid-cols-[200px_1fr] max-w-7xl">
         <aside className="hidden lg:block">
           {/*Categories*/}
           <div className="mb-9">
-            <h3 className="mb-3 border-b border-gray-300 pb-3 text-[10px] font-bold uppercase">Categories</h3>
+            <h3 className="mb-3 border-b border-gray-300 pb-3 text-sm font-bold uppercase">
+              Categories
+            </h3>
 
             <div className="space-y-4">
-              <button onClick={() => setSelectedCategory("All")} className={`flex w-full items-center justify-between text-left text-[13px] transition ${
-                selectedCategory === "All" ? "font-semibold" : "text-gray-700 hover:text-black"}`}>
-                  <span>All Collections</span>
+              <button
+                onClick={() => setSelectedCategory("All")}
+                className={`flex w-full items-center justify-between text-left text-[13px] transition ${
+                  selectedCategory === "All"
+                    ? "font-semibold"
+                    : "text-gray-700 hover:text-black"
+                }`}
+              >
+                <span>All Collections</span>
               </button>
 
-               {categories.map((category) => (
-                  <button
-                    key={category.name}
-                    onClick={() =>
-                      setSelectedCategory(category.name)
-                    }
-                    className={`flex items-center justify-between text-left text-[13px] transition ${
+              {categories.map((category) => (
+                <button
+                  key={category.name}
+                  onClick={() => setSelectedCategory(category.name)}
+                  className={`flex items-center justify-between text-left text-[13px] transition ${
+                    selectedCategory === category.name
+                      ? "font-semibold text-[#98701c]"
+                      : "text-gray-700 hover:text-black"
+                  }`}
+                >
+                  <span
+                    className={
                       selectedCategory === category.name
-                        ? "font-semibold text-[#98701c]"
-                        : "text-gray-700 hover:text-black"
-                    }`}
+                        ? "border-b border-[#98701c]"
+                        : ""
+                    }
                   >
-                    <span
-                      className={
-                        selectedCategory === category.name
-                          ? "border-b border-[#98701c]"
-                          : ""
-                      }
-                    >
-                      {category.name}
-                    </span>
+                    {category.name}
+                  </span>
 
-                    <span className="text-gray-400">
-                      ({category.count})
-                    </span>
-                  </button>
-                ))}
+                  <span className="text-gray-400">({category.count})</span>
+                </button>
+              ))}
             </div>
           </div>
 
           {/* Size */}
-            <div className="mb-9">
+          <div className="mb-9">
+            <h3 className="mb-4 border-b border-gray-300 pb-3 text-[10px] font-bold uppercase tracking-[0.15em]">
+              Size
+            </h3>
 
-              <h3 className="mb-4 border-b border-gray-300 pb-3 text-[10px] font-bold uppercase tracking-[0.15em]">
-                Size
-              </h3>
-
-              <div className="grid grid-cols-4 gap-2">
-
-                {sizes.map((size) => (
-                  <button
-                    key={size}
-                    onClick={() =>
-                      setSelectedSize(
-                        selectedSize === size ? null : size
-                      )
-                    }
-                    className={`h-8 border text-[10px] font-medium transition ${
-                      selectedSize === size
-                        ? "border-black bg-black text-white"
-                        : "border-gray-300 bg-transparent text-gray-700 hover:border-black"
-                    }`}
-                  >
-                    {size}
-                  </button>
-                ))}
-
-              </div>
-            </div>
-
-            {/* Price Range */}
-            <div>
-
-              <h3 className="mb-4 border-b border-gray-300 pb-3 text-[10px] font-bold uppercase tracking-[0.15em]">
-                Price Range
-              </h3>
-
-              <div className="relative mb-5">
-
-                <input
-                  type="range"
-                  min="100"
-                  max="5000"
-                  step="50"
-                  value={maxPrice}
-                  onChange={(e) =>
-                    setMaxPrice(Number(e.target.value))
+            <div className="grid grid-cols-4 gap-2">
+              {sizes.map((size) => (
+                <button
+                  key={size}
+                  onClick={() =>
+                    setSelectedSize(selectedSize === size ? null : size)
                   }
-                  className="w-full cursor-pointer accent-[#98701c]"
-                />
-
-              </div>
-
-              <div className="flex justify-between text-[10px] font-medium text-gray-600">
-                <span>#100</span>
-                <span>
-                  {maxPrice >= 5000
-                    ? "#5,000+"
-                    : formatPrice(maxPrice)}
-                </span>
-              </div>
-
+                  className={`h-8 border text-[10px] font-medium transition ${
+                    selectedSize === size
+                      ? "border-black bg-black text-white"
+                      : "border-gray-300 bg-transparent text-gray-700 hover:border-black"
+                  }`}
+                >
+                  {size}
+                </button>
+              ))}
             </div>
+          </div>
+
+          {/* Price Range */}
+          <div>
+            <h3 className="mb-4 border-b border-gray-300 pb-3 text-[10px] font-bold uppercase tracking-[0.15em]">
+              Price Range
+            </h3>
+
+            <div className="relative mb-5">
+              <input
+                type="range"
+                min="100"
+                max="5000"
+                step="50"
+                value={maxPrice}
+                onChange={(e) => setMaxPrice(Number(e.target.value))}
+                className="w-full cursor-pointer accent-[#98701c]"
+              />
+            </div>
+
+            <div className="flex justify-between text-[10px] font-medium text-gray-600">
+              <span>#100</span>
+              <span>
+                {maxPrice >= 5000 ? "#5,000+" : formatPrice(maxPrice)}
+              </span>
+            </div>
+          </div>
         </aside>
 
         <section>
+          {filteredProducts.length > 0 ? (
+            <div className="grid grid-cols-2 gap-x-4 gap-y-10 md:grid-cols-3 md:gap-x-5">
+              {filteredProducts.map((product) => (
+                <article key={product.id} className="group cursor-pointer">
+                  {/* Product Image */}
+                  <div className="relative mb-3 aspect-[0.78] overflow-hidden bg-[#eeeae4]">
+                    <img
+                      src={`/${product.image}`}
+                      alt={product.name}
+                      className="h-full w-full object-cover transition duration-700 ease-out group-hover:scale-[1.03]"
+                    />
 
-            {filteredProducts.length > 0 ? (
+                    {/* Quick Add */}
+                    <button className="absolute bottom-0 left-0 right-0 translate-y-full bg-black py-3 text-[10px] font-semibold uppercase tracking-[0.15em] text-white transition-transform duration-300 group-hover:translate-y-0">
+                      Quick Add
+                    </button>
+                  </div>
 
-              <div className="grid grid-cols-2 gap-x-4 gap-y-10 md:grid-cols-3 md:gap-x-5">
+                  {/* Product Details */}
+                  <div>
+                    <h2 className="mb-2 text-[13px] font-medium text-gray-900 md:text-[14px]">
+                      {product.name}
+                    </h2>
 
-                {filteredProducts.map((product) => (
+                    <p className="text-[15px] font-medium text-black">
+                      {formatPrice(product.price)}
+                    </p>
+                  </div>
+                </article>
+              ))}
+            </div>
+          ) : (
+            <div className="flex min-h-100 items-center justify-center border border-gray-200">
+              <div className="text-center">
+                <h3 className="mb-2 font-serif text-2xl">No products found</h3>
 
-                  <article
-                    key={product.id}
-                    className="group cursor-pointer"
-                  >
+                <p className="mb-5 text-sm text-gray-500">
+                  Try adjusting your filters.
+                </p>
 
-                    {/* Product Image */}
-                    <div className="relative mb-3 aspect-[0.78] overflow-hidden bg-[#eeeae4]">
-
-                      <img
-                        src={`/${product.image}`}
-                        alt={product.name}
-                        className="h-full w-full object-cover transition duration-700 ease-out group-hover:scale-[1.03]"
-                      />
-
-                      {/* Quick Add */}
-                      <button
-                        className="absolute bottom-0 left-0 right-0 translate-y-full bg-black py-3 text-[10px] font-semibold uppercase tracking-[0.15em] text-white transition-transform duration-300 group-hover:translate-y-0"
-                      >
-                        Quick Add
-                      </button>
-
-                    </div>
-
-                    {/* Product Details */}
-                    <div>
-
-                      <h2 className="mb-2 text-[13px] font-medium text-gray-900 md:text-[14px]">
-                        {product.name}
-                      </h2>
-
-                        <p className="text-[15px] font-medium text-black">
-                          {formatPrice(product.price)}
-                        </p>
-
-                    </div>
-
-                  </article>
-
-                ))}
-
+                <button
+                  onClick={() => {
+                    setSelectedCategory("All");
+                    setMaxPrice(5000);
+                    setSelectedSize(null);
+                  }}
+                  className="bg-black px-6 py-3 text-[10px] font-semibold uppercase tracking-[0.15em] text-white"
+                >
+                  Clear Filters
+                </button>
               </div>
-
-            ) : (
-
-              <div className="flex min-h-100 items-center justify-center border border-gray-200">
-                <div className="text-center">
-                  <h3 className="mb-2 font-serif text-2xl">
-                    No products found
-                  </h3>
-
-                  <p className="mb-5 text-sm text-gray-500">
-                    Try adjusting your filters.
-                  </p>
-
-                  <button
-                    onClick={() => {
-                      setSelectedCategory("All");
-                      setMaxPrice(5000);
-                      setSelectedSize(null);
-                    }}
-                    className="bg-black px-6 py-3 text-[10px] font-semibold uppercase tracking-[0.15em] text-white"
-                  >
-                    Clear Filters
-                  </button>
-                </div>
-              </div>
-
-            )}
-
-          </section>
-
+            </div>
+          )}
+        </section>
+        </div>
       </div>
     </>
   );
