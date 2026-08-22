@@ -312,7 +312,7 @@ const NewArrivalsPage = () => {
                 <h3 className="mb-2 font-serif text-2xl">No products found</h3>
 
                 <p className="mb-5 text-sm text-gray-500">
-                  Try adjusting your filters.
+                  Try adjusting your filters
                 </p>
 
                 <button
