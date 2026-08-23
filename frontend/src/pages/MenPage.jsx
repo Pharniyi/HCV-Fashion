@@ -272,7 +272,7 @@ const MenPage = () => {
                       <button
                         onClick={() =>
                           setVisibleProducts((prev) =>
-                            Math.min(prev + 8, sortedProducts.length)
+                            Math.min(prev + 4, sortedProducts.length)
                           )
                         }
                         className="mt-8 border px-12 py-4 text-xs uppercase tracking-widest hover:bg-black hover:text-white transition"
