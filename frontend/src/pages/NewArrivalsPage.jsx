@@ -124,7 +124,8 @@ const categories = [
 const sizes = ["XS", "S", "M", "L", "XL", "XXL"];
 
 const formatPrice = (price) => {
-  return `₦${price.toLocaleString("en-NG", {
+  const num = Number(String(price).replace(/[^0-9.-]+/g, "")) || 0;
+  return `₦${num.toLocaleString("en-NG", {
     minimumFractionDigits: 2,
     maximumFractionDigits: 2,
   })}`;
@@ -133,7 +134,7 @@ const formatPrice = (price) => {
 const NewArrivalsPage = () => {
   const [selectedCategory, setSelectedCategory] = useState("All");
   const [sortOption, setSortOption] = useState("Newest");
-  const [visibleProducts, setVisibleProducts] = useState(8);
+  const [visibleProducts, setVisibleProducts] = useState(6);
   const [selectedSize, setSelectedSize] = useState(null);
   const [maxPrice, setMaxPrice] = useState(5000);
 
@@ -155,6 +156,8 @@ const NewArrivalsPage = () => {
     }
     return 0; // For "Popular", no sorting is applied
   });
+
+  const displayedCount = Math.min(visibleProducts, sortedProducts.length);
 
   return (
     <>
@@ -303,7 +306,7 @@ const NewArrivalsPage = () => {
           <section>
             {filteredProducts.length > 0 ? (
               <div className="grid grid-cols-2 gap-x-4 gap-y-10 md:grid-cols-3 md:gap-x-5">
-                {filteredProducts.map((product) => (
+                {sortedProducts.slice(0, visibleProducts).map((product) => (
                   <article key={product.id} className="group cursor-pointer">
                     {/* Product Image */}
                     <div className="relative mb-3 aspect-[0.78] overflow-hidden bg-[#eeeae4]">
@@ -362,31 +365,36 @@ const NewArrivalsPage = () => {
               <div className="border-t"></div>
 
               <div className="flex flex-col items-center mt-10">
-                {visibleProducts == sortedProducts.length && (
-                  <p
-                    className="text-xs cursor-pointer tracking-widest uppercase text-gray-500"
-                    onClick={() => setVisibleProducts((prev) => prev - 4)}
-                  >
-                    <div className="text-center">
+                {visibleProducts >= sortedProducts.length && (
+                  <div className="text-center cursor-pointer text-xs tracking-widest uppercase text-gray-500">
+                    <div>
                       <span>
-                        Showing {visibleProducts} of {sortedProducts.length}{" "}
-                        Items
+                        Showing {displayedCount} of {sortedProducts.length} Items
                       </span>
                       <div className="w-48 h-0.5 bg-black mt-4"></div>
+                      <button
+                        onClick={() => setVisibleProducts(6)}
+                        className="mt-4 border px-6 py-2 text-[10px] uppercase tracking-widest hover:bg-black hover:text-white transition"
+                      >
+                        Show Less
+                      </button>
                     </div>
-                  </p>
+                  </div>
                 )}
 
                 {visibleProducts < sortedProducts.length && (
                   <div>
                     <div className="text-center">
                       <span>
-                        Showing {visibleProducts} of {sortedProducts.length}{" "}
-                        Items
+                        Showing {displayedCount} of {sortedProducts.length} Items
                       </span>
                       <div className="w-48 h-0.5 bg-black mt-4"></div>
                       <button
-                        onClick={() => setVisibleProducts((prev) => prev + 4)}
+                        onClick={() =>
+                          setVisibleProducts((prev) =>
+                            Math.min(prev + 6, sortedProducts.length)
+                          )
+                        }
                         className="mt-8 border px-12 py-4 text-xs uppercase tracking-widest hover:bg-black hover:text-white transition"
                       >
                         Load More

@@ -115,6 +115,8 @@ const MenPage = () => {
     return 0; // For "Newest Arrivals", no sorting is applied
   });
 
+  const displayedCount = Math.min(visibleProducts, sortedProducts.length);
+
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
@@ -243,36 +245,43 @@ const MenPage = () => {
         <div className="border-t"></div>
 
         <div className="flex flex-col items-center mt-10">
-          {visibleProducts == sortedProducts.length && (
-            <p
-              className="text-xs cursor-pointer tracking-widest uppercase text-gray-500"
-              onClick={() => setVisibleProducts((prev) => prev - 4)}
-            >
-              <div className="text-center">
-                <span>
-                  Showing {visibleProducts} of {sortedProducts.length} Items
-                </span>
-                <div className="w-48 h-0.5 bg-black mt-4"></div>
-              </div>
-            </p>
-          )}
+          {visibleProducts >= sortedProducts.length && (
+                  <div className="text-center cursor-pointer text-xs tracking-widest uppercase text-gray-500">
+                    <div>
+                      <span>
+                        Showing {displayedCount} of {sortedProducts.length} Items
+                      </span>
+                      <div className="w-48 h-0.5 bg-black mt-4"></div>
+                      <button
+                        onClick={() => setVisibleProducts(8)}
+                        className="mt-4 border px-6 py-2 text-[10px] uppercase tracking-widest hover:bg-black hover:text-white transition"
+                      >
+                        Show Less
+                      </button>
+                    </div>
+                  </div>
+                )}
 
-          {visibleProducts < sortedProducts.length && (
-            <div>
-              <div className="text-center">
-                <span>
-                  Showing {visibleProducts} of {sortedProducts.length} Items
-                </span>
-                <div className="w-48 h-0.5 bg-black mt-4"></div>
-                <button
-                  onClick={() => setVisibleProducts((prev) => prev + 4)}
-                  className="mt-8 border px-12 py-4 text-xs uppercase tracking-widest hover:bg-black hover:text-white transition"
-                >
-                  Load More
-                </button>
-              </div>
-            </div>
-          )}
+                {visibleProducts < sortedProducts.length && (
+                  <div>
+                    <div className="text-center">
+                      <span>
+                        Showing {displayedCount} of {sortedProducts.length} Items
+                      </span>
+                      <div className="w-48 h-0.5 bg-black mt-4"></div>
+                      <button
+                        onClick={() =>
+                          setVisibleProducts((prev) =>
+                            Math.min(prev + 8, sortedProducts.length)
+                          )
+                        }
+                        className="mt-8 border px-12 py-4 text-xs uppercase tracking-widest hover:bg-black hover:text-white transition"
+                      >
+                        Load More
+                      </button>
+                    </div>
+                  </div>
+                )}
         </div>
       </section>
 
