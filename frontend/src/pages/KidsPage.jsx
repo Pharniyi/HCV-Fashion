@@ -285,6 +285,7 @@ const KidsPage = () => {
                       >
                         Load More
                       </button>
+                      <div></div>
                     </div>
                   </div>
                 )}
