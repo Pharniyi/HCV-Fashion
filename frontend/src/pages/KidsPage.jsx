@@ -286,7 +286,8 @@ const KidsPage = () => {
                         Load More
                       </button>
                       <div>
-                        <p><h1></h1></p>
+                        <p><h1>
+                          <img src="" alt="" /></h1></p>
                       </div>
                     </div>
                   </div>
