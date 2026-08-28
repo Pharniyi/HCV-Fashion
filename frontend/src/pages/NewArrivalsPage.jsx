@@ -112,13 +112,13 @@ const products = [
 ];
 
 const categories = [
-  { name: "Jacket", count: 24 },
-  { name: "Gowns", count: 18 },
-  { name: "Knitwear", count: 42 },
-  { name: "Tops", count: 42 },
-  { name: "Trousers", count: 31 },
-  { name: "Shirt", count: 31 },
-  { name: "Polo", count: 31 },
+  { name: "Jacket" },
+  { name: "Gowns"},
+  { name: "Knitwear"},
+  { name: "Tops"},
+  { name: "Trousers"},
+  { name: "Shirt"},
+  { name: "Polo"},
 ];
 
 const sizes = ["XS", "S", "M", "L", "XL", "XXL"];
@@ -223,6 +223,7 @@ const NewArrivalsPage = () => {
                   }`}
                 >
                   <span>All Collections</span>
+                  <span className="text-gray-400">({products.length})</span>
                 </button>
 
                 {categories.map((category) => (
@@ -245,7 +246,7 @@ const NewArrivalsPage = () => {
                       {category.name}
                     </span>
 
-                    <span className="text-gray-400">({category.count})</span>
+                    <span className="text-gray-400">({products.filter(p => p.category === category.name).length})</span>
                   </button>
                 ))}
               </div>
