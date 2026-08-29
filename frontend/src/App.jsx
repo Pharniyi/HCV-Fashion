@@ -11,6 +11,7 @@ import KidsPage from './pages/KidsPage'
 import NewArrivalsPage from './pages/NewArrivalsPage'
 import AboutUsPage from './pages/AboutUsPage'
 import ContactPage from './pages/ContactPage'
+import ProductPage from "./pages/ProductPage"
 import {Routes, Route, useLocation} from 'react-router-dom'
 
 const App = () => {
@@ -32,6 +33,7 @@ const App = () => {
         <Route path='/newarrivals' element= {<NewArrivalsPage/>} />
         <Route path='/aboutus' element= {<AboutUsPage/>} />
         <Route path='/contact' element= {<ContactPage/>} />
+        <Route path='/product/:productId' element= {<ProductPage/>} />
       </Routes>
     </div>
 

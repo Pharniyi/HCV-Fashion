@@ -15,17 +15,17 @@ import { Link } from "react-router-dom";
 const categories = [
   {
     title: "Women",
-    image: "/homepage/women category.png",
+    image: "/src/assets//homepage/women category.png",
     links: "/women"
   },
   {
     title: "Men",
-    image: "/homepage/male category.png",
+    image: "/src/assets//homepage/male category.png",
     links: "/men"
   },
   {
     title: "Kids",
-    image: "/homepage/kids category.jpg",
+    image: "/src/assets//homepage/kids category.jpg",
     links: "/kids"
   },
 ];
@@ -34,23 +34,23 @@ const arrivals = [
   {
     name: "Tees",
     price: "#5,000.00",
-    image: "homepage/Tees.jpg",
+    image: "/src/assets/homepage/Tees.jpg",
   },
   {
     name: "Pant Trouser",
     price: "#10,000.00",
-    image: "homepage/pant trouser.jpg",
+    image: "/src/assets/homepage/pant trouser.jpg",
   },
   {
     name: "Top",
     price: "#9,000.00",
-    image: "homepage/bodycon top.jpg",
+    image: "/src/assets/homepage/bodycon top.jpg",
   },
 
   {
     name: "Relaxed Blazer",
     price: "#20,000.00",
-    image: "homepage/blazer.jpg",
+    image: "/src/assets/homepage/blazer.jpg",
   },
 ];
 

@@ -10,84 +10,84 @@ const products = [
     name: "Minimalist Two-Piece Set",
     category: "Sets",
     price: "₦ 15,000.00",
-    image: "kids/two piece.jpg",
+    image: "/src/assets/kids/two piece.jpg",
   },
   {
     id: 2,
     name: "Sequin Tulle Dress",
     category: "Dresses",
     price: "₦ 25,000.00",
-    image: "kids/sleeveless dress.jpg",
+    image: "/src/assets/kids/sleeveless dress.jpg",
   },
   {
     id: 3,
     name: "Canvas Shorts",
     category: "Shorts",
     price: "₦ 10,000.00",
-    image: "kids/shorts2.jpg",
+    image: "/src/assets/kids/shorts2.jpg",
   },
   {
     id: 4,
     name: "Denim Shorts",
     category: "Shorts",
     price: "₦ 12,000.00",
-    image: "kids/shorts.jpg",
+    image: "/src/assets/kids/shorts.jpg",
   },
   {
     id: 5,
     name: "Striped Knit Polo",
     category: "Tops",
     price: "₦ 8,000.00",
-    image: "kids/polo2.jpg",
+    image: "/src/assets/kids/polo2.jpg",
   },
   {
     id: 6,
     name: "Classic Zip Polo",
     category: "Tops",
     price: "₦ 8,000.00",
-    image: "kids/polo1.jpg",
+    image: "/src/assets/kids/polo1.jpg",
   },
   {
     id: 7,
     name: "Denim Overshirt",
     category: "Jackets",
     price: "₦ 12,000.00",
-    image: "kids/jean jacket.jpg",
+    image: "/src/assets/kids/jean jacket.jpg",
   },
   {
     id: 8,
     name: "Rose Applique Dress",
     category: "Dresses",
     price: "₦ 25,000.00",
-    image: "kids/flower dress.jpg",
+    image: "/src/assets/kids/flower dress.jpg",
   },
   {
     id: 9,
     name: "Denim Cargo Trouser",
     category: "Trousers",
     price: "₦ 18,000.00",
-    image: "kids/Denim trouser.jpg",
+    image: "/src/assets/kids/Denim trouser.jpg",
   },
   {
     id: 10,
     name: "Cargo Trouser",
     category: "Trousers",
     price: "₦ 18,000.00",
-    image: "kids/black baggy jeans.jpg",
+    image: "/src/assets/kids/black baggy jeans.jpg",
   },
   {
     id: 11,
     name: "Basic Top",
     category: "Tops",
     price: "₦ 8,000.00",
-    image: "kids/basic top.jpg",
+    image: "/src/assets/kids/basic top.jpg",
   },
   {
     id: 12,
     name: "Cargo Jeans",
     category: "Trousers",
     price: "₦ 18,000.00",
-    image: "kids/baggy jeans.jpg",
+    image: "/src/assets/kids/baggy jeans.jpg",
   }
 ];
 
@@ -119,7 +119,7 @@ const KidsPage = () => {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative h-[80vh] overflow-hidden bg-primary" style={{backgroundImage: "url('/kids/kid-hero.png')", backgroundSize: "contain", backgroundPosition: "top"}}>
+      <section className="relative h-[80vh] overflow-hidden bg-primary" style={{backgroundImage: "url('/src/assets/kids/kid-hero.png')", backgroundSize: "contain", backgroundPosition: "top"}}>
 
         {/* Dark Overlay */}
         <div className="absolute inset-0 bg-black/35"></div>

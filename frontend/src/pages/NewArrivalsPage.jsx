@@ -8,105 +8,105 @@ const products = [
     name: "Heritage Corduroy Jacket",
     category: "Jacket",
     price: " 32,000.00",
-    image: "men/Corduroy Jacket.jpg",
+    image: "/src/assets/men/Corduroy Jacket.jpg",
   },
   {
     id: 2,
     name: "Ethnic Pattern Silk Shirt",
     category: "Shirt",
     price: " 18,500.00",
-    image: "men/Pattern_Shirt.jpg",
+    image: "/src/assets/men/Pattern_Shirt.jpg",
   },
   {
     id: 3,
     name: "Tan Argyle Knit Vest",
     category: "Knitwear",
     price: " 14,500.00",
-    image: "men/Sweater V-neck.jpg",
+    image: "/src/assets/men/Sweater V-neck.jpg",
   },
   {
     id: 4,
     name: "Vertical Stripe Knit Polo",
     category: "Polo",
     price: " 16,000.00",
-    image: "men/vertical_stripe_knit_polo.jpg",
+    image: "/src/assets/men/vertical_stripe_knit_polo.jpg",
   },
   {
     id: 5,
     name: "Palm Tree Summer Shirt",
     category: "Shirt",
     price: " 12,000.00",
-    image: "men/Palm Tree Shirt.jpg",
+    image: "/src/assets/men/Palm Tree Shirt.jpg",
   },
   {
     id: 6,
     name: "Tailored Wool Trousers",
     category: "Trousers",
     price: " 24,000.00",
-    image: "men/tailored_wool_trouser.jpg",
+    image: "/src/assets/men/tailored_wool_trouser.jpg",
   },
   {
     id: 7,
     name: "Green Stripe Polo",
     category: "Polo",
     price: " 28,000.00",
-    image: "men/green_stripe_polo.jpg",
+    image: "/src/assets/men/green_stripe_polo.jpg",
   },
   {
     id: 8,
     name: "Sweatshirt",
     category: "Jacket",
     price: " 19,500.00",
-    image: "men/sweatshirt.jpg",
+    image: "/src/assets/men/sweatshirt.jpg",
   },
   {
     id: 9,
     name: "Summer Linen Shorts",
     category: "Shorts",
     price: " 32,000.00",
-    image: "men/men's vintage shorts.jpg",
+    image: "/src/assets/men/men's vintage shorts.jpg",
   },
   {
     id: 10,
     name: "Red stripe polo",
     category: "Polo",
     price: " 12,000.00",
-    image: "men/red stripe polo.jpg",
+    image: "/src/assets/men/red stripe polo.jpg",
   },
   {
     id: 11,
     name: "Cross shorts",
     category: "Shorts",
     price: " 32,000.00",
-    image: "men/cross short.jpg",
+    image: "/src/assets/men/cross short.jpg",
   },
   {
     id: 12,
     name: "Black trouser",
     category: "Trousers",
     price: " 32,000.00",
-    image: "men/Black trouser.jpg",
+    image: "/src/assets/men/Black trouser.jpg",
   },
   {
     id: 13,
     name: "Ethereal brown gown",
     category: "Gowns",
     price: " 15,000.00",
-    image: "women/brown gown.jpg",
+    image: "/src/assets/women/brown gown.jpg",
   },
   {
     id: 14,
     name: "Basic Top",
     category: "Tops",
     price: " 8,000.00",
-    image: "kids/basic top.jpg",
+    image: "/src/assets/kids/basic top.jpg",
   },
   {
     id: 15,
     name: "Cargo Jeans",
     category: "Trousers",
     price: " 18,000.00",
-    image: "kids/baggy jeans.jpg",
+    image: "/src/assets/kids/baggy jeans.jpg",
   },
   
 ];
@@ -312,7 +312,7 @@ const NewArrivalsPage = () => {
                     {/* Product Image */}
                     <div className="relative mb-3 aspect-[0.78] overflow-hidden bg-[#eeeae4]">
                       <img
-                        src={`/${product.image}`}
+                        src={`${product.image}`}
                         alt={product.name}
                         className="h-full w-full object-cover transition duration-700 ease-out group-hover:scale-[1.03]"
                       />

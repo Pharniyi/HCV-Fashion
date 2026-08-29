@@ -9,7 +9,7 @@ const ContactPage = () => {
       {/* Hero Section */}
       <section className="relative h-[90vh] ">
         <img
-          src="contactus/contact-hero.png"
+          src="/src/assets/contactus/contact-hero.png"
           alt="About Us"
           className="object-cover w-full h-full object-top"
         />
@@ -123,7 +123,7 @@ const ContactPage = () => {
       <section className="max-w-7xl mx-auto px-6 py-5">
         <div
           className="h-75 rounded-lg overflow-hidden relative bg-cover "
-          style={{ backgroundImage: "url('contactus/contactus-banner.png')" }}
+          style={{ backgroundImage: "url('/src/assets/contactus/contactus-banner.png')" }}
         >
           <div className="absolute inset-0 bg-black/40"></div>
 
@@ -142,7 +142,7 @@ const ContactPage = () => {
                 className="flex items-center gap-2 bg-black border border-white/30 rounded-lg px-3 py-2 text-white transition-all duration-200 hover:scale-105 hover:bg-gray-900 active:scale-95"
               >
                 <img
-                  src="contactus/google-play.png"
+                  src="/src/assets/contactus/google-play.png"
                   alt="Download on Google Play"
                   className="h-8 md:h-9 w-auto object-contain"
                 />
@@ -156,7 +156,7 @@ const ContactPage = () => {
                 className="flex items-center gap-2 bg-black border border-white/30 rounded-lg px-3 py-2 text-white transition-all duration-200 hover:scale-105 hover:bg-gray-900 active:scale-95"
               >
                 <img
-                  src="contactus/app-store.png"
+                  src="/src/assets/contactus/app-store.png"
                   alt="Download on App Store"
                   className="h-8 md:h-9 w-auto object-contain"
                 />
