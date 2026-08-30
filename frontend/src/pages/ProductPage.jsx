@@ -44,7 +44,6 @@ const ProductPage = () => {
       <div>
         <h3>{currency} {product.price}.00</h3>
         <h4>{currency} {product.price}.00</h4>
-        <h1></h1>
       </div>
       <p className="max-w-[555px]">{product.description}</p>
       <div>
