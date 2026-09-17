@@ -9,7 +9,7 @@ const products = [
     name: "Classic black gown",
     category: "Gowns",
     price: "₦ 15,000.00",
-    image: "/src/assets/women/black gown.jpg",
+    image: "/images/women/black gown.jpg",
   },
 
   {
@@ -17,7 +17,7 @@ const products = [
     name: "Ethereal browngown",
     category: "Gowns",
     price: "₦ 15,000.00",
-    image: "/src/assets/women/brown gown.jpg",
+    image: "/images/women/brown gown.jpg",
   },
 
   {
@@ -25,7 +25,7 @@ const products = [
     name: "Silk navy shirt",
     category: "Shirts",
     price: "₦ 9,000.00",
-    image: "/src/assets/women/silk shirt.jpg",
+    image: "/images/women/silk shirt.jpg",
   },
 
   {
@@ -33,7 +33,7 @@ const products = [
     name: "Sculpted ash blazer",
     category: "Blazers",
     price: "₦ 28,000.00",
-    image: "/src/assets/women/ash blazer.jpg",
+    image: "/images/women/ash blazer.jpg",
   },
 
   {
@@ -41,7 +41,7 @@ const products = [
     name: "Wide leg pant trousers",
     category: "Trousers",
     price: "₦ 10,000.00",
-    image: "/src/assets/women/wide leg pant trouser.jpg",
+    image: "/images/women/wide leg pant trouser.jpg",
   },
 
   {
@@ -49,7 +49,7 @@ const products = [
     name: "Pleated ash trouser",
     category: "Trousers",
     price: "₦ 15,000.00",
-    image: "/src/assets/women/ash pant trouser.jpg",
+    image: "/images/women/ash pant trouser.jpg",
   },
 
   {
@@ -57,7 +57,7 @@ const products = [
     name: "Tiered black skirt",
     category: "Skirts",
     price: "₦ 10,000.00",
-    image: "/src/assets/women/black skirt.jpg",
+    image: "/images/women/black skirt.jpg",
   },
 
   {
@@ -65,7 +65,7 @@ const products = [
     name: "Denim cargo trouser",
     category: "Trousers",
     price: "₦ 15,000.00",
-    image: "/src/assets/women/jeans trouser.jpg",
+    image: "/images/women/jeans trouser.jpg",
   },
 
   {
@@ -73,14 +73,14 @@ const products = [
     name: "Baggy indigo jeans",
     category: "Trousers",
     price: "₦ 25,000.00",
-    image: "/src/assets/women/baggy jeans.jpg",
+    image: "/images/women/baggy jeans.jpg",
   },
   {
     id: 10,
     name: "Wine boat neck top",
     category: "Tops",
     price: "₦ 10,000.00",
-    image: "/src/assets/women/wine top.jpg",
+    image: "/images/women/wine top.jpg",
   },
   
   {
@@ -88,42 +88,42 @@ const products = [
     name: "Stripped cropped shirt",
     category: "Shirts",
     price: "₦ 10,000.00",
-    image: "/src/assets/women/crop shirt.jpg",
+    image: "/images/women/crop shirt.jpg",
   },
   {
     id: 12,
     name: "Turtle neck",
     category: "Tops",
     price: "₦ 8,000.00",
-    image: "/src/assets/women/turtle neck.jpg",
+    image: "/images/women/turtle neck.jpg",
   },
   {
     id: 13,
     name: "Basic top",
     category: "Tops",
     price: "₦ 7,000.00",
-    image: "/src/assets/women/brown basic top.jpg",
+    image: "/images/women/brown basic top.jpg",
   },
   {
     id: 14,
     name: "Jean Knicker",
     category: "Shorts",
     price: "₦ 15,000.00",
-    image: "/src/assets/women/female short.jpg",
+    image: "/images/women/female short.jpg",
   },
   {
     id: 15,
     name: "Turtle neck",
     category: "Tops",
     price: "₦ 10,000.00",
-    image: "/src/assets/women/thick turtle neck.jpg",
+    image: "/images/women/thick turtle neck.jpg",
   },
   {
     id: 16,
     name: "Cargo jean trouser",
     category: "Trousers",
     price: "₦ 10,000.00",
-    image: "/src/assets/women/wide leg cargo jeans.jpg",
+    image: "/images/women/wide leg cargo jeans.jpg",
   },
 
   {
@@ -131,28 +131,28 @@ const products = [
     name: "Checkers shirt",
     category: "Shirts",
     price: "₦ 8,000.00",
-    image: "/src/assets/women/checkers shirt.jpg",
+    image: "/images/women/checkers shirt.jpg",
   },
   {
     id: 18,
     name: "Round neck",
     category: "Tops",
     price: "₦ 7,000.00",
-    image: "/src/assets/women/round neck.jpg",
+    image: "/images/women/round neck.jpg",
   },
   {
     id: 19,
     name: "Jean trouser",
     category: "Trousers",
     price: "₦ 20,000.00",
-    image: "/src/assets/women/ash jeans.jpg"
+    image: "/images/women/ash jeans.jpg"
   },
   {
     id: 20,
     name: "Shirt",
     category: "Shirts",
     price: "₦ 10,000.00",
-    image: "/src/assets/women/shirt.png"
+    image: "/images/women/shirt.png"
   }
 
 
@@ -185,7 +185,7 @@ const WomenPage = () => {
       <div className="min-h-screen">
   
         {/* Hero Section */}
-        <section className="relative h-[80vh]" style={{backgroundImage: "url('/src/assets/women/women-hero.png')", backgroundSize: "contain", backgroundPosition: "top"}}>
+        <section className="relative h-[80vh]" style={{backgroundImage: "url('/images/women/women-hero.png')", backgroundSize: "contain", backgroundPosition: "top"}}>
           <div className="absolute inset-0 bg-black/40"></div>
               <div className="relative z-10 h-full flex flex-col justify-center items-center text-white text-center px-4">
                   <h1 className="text-6xl font-serif font-semibold mb-4">

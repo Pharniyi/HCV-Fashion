@@ -15,17 +15,17 @@ import { Link } from "react-router-dom";
 const categories = [
   {
     title: "Women",
-    image: "/src/assets//homepage/women category.png",
+    image: "/images/homepage/women category.png",
     links: "/women"
   },
   {
     title: "Men",
-    image: "/src/assets//homepage/male category.png",
+    image: "/images/homepage/male category.png",
     links: "/men"
   },
   {
     title: "Kids",
-    image: "/src/assets//homepage/kids category.jpg",
+    image: "/images/homepage/kids category.jpg",
     links: "/kids"
   },
 ];
@@ -34,23 +34,23 @@ const arrivals = [
   {
     name: "Tees",
     price: "₦5,000.00",
-    image: "/src/assets/homepage/Tees.jpg",
+    image: "/images/homepage/Tees.jpg",
   },
   {
     name: "Pant Trouser",
     price: "₦10,000.00",
-    image: "/src/assets/homepage/pant trouser.jpg",
+    image: "/images/homepage/pant trouser.jpg",
   },
   {
     name: "Top",
     price: "₦9,000.00",
-    image: "/src/assets/homepage/bodycon top.jpg",
+    image: "/images/homepage/bodycon top.jpg",
   },
 
   {
     name: "Relaxed Blazer",
     price: "₦20,000.00",
-    image: "/src/assets/homepage/blazer.jpg",
+    image: "/images/homepage/blazer.jpg",
   },
 ];
 

@@ -9,7 +9,7 @@ const fallbackProducts = [
     name: "Heritage Corduroy Jacket",
     category: "Jacket",
     price: "₦ 32,000.00",
-    image: "/src/assets/men/Corduroy Jacket.jpg",
+    image: "/images/men/Corduroy Jacket.jpg",
     sizes: ["S", "M", "L", "XL"],
     description:
       "A premium everyday jacket designed with a structured silhouette, durable cotton blend, and refined finish for elevated styling.",
@@ -19,7 +19,7 @@ const fallbackProducts = [
     name: "Classic Black Gown",
     category: "Gowns",
     price: "₦ 15,000.00",
-    image: "/src/assets/women/black gown.jpg",
+    image: "/images/women/black gown.jpg",
     sizes: ["XS", "S", "M", "L", "XL"],
     description:
       "A timeless black gown with a seamless drape, polished neckline, and flattering fit suited for both statement and understated styling.",
@@ -38,7 +38,7 @@ const normalizeProduct = (product) => {
   return {
     ...product,
     _id: product._id ?? product.id,
-    image: images.length ? images : ["/src/assets/men/Corduroy Jacket.jpg"],
+    image: images.length ? images : ["/images/men/Corduroy Jacket.jpg"],
     sizes: Array.isArray(product.sizes) && product.sizes.length
       ? product.sizes
       : ["XS", "S", "M", "L", "XL", "XXL"],

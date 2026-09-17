@@ -68,7 +68,7 @@ const AboutUsPage = () => {
       {/* Hero Section */}
       <section className="relative h-[90vh] ">
         <img
-          src="src/assets/aboutus/aboutus-hero.png"
+          src="/images/aboutus/aboutus-hero.png"
           alt="About Us"
           className="object-cover w-full h-full object-top"
         />
@@ -81,7 +81,7 @@ const AboutUsPage = () => {
           <div className="relative">
             <div className="w-95 h-60 overflow-hidden rounded-3xl">
               <img
-                src="src/assets/aboutus/aboutus2.png"
+                src="/images/aboutus/aboutus2.png"
                 alt=""
                 className="w-full h-full object-cover"
               />
@@ -97,7 +97,7 @@ const AboutUsPage = () => {
 
             <div className="absolute top-45 left-45 w-65 h-45 rounded-3xl overflow-hidden ">
               <img
-                src="src/assets/aboutus/aboutus1.jpg"
+                src="/images/aboutus/aboutus1.jpg"
                 alt=""
                 className="w-full h-full object-cover"
               />
@@ -224,7 +224,7 @@ const AboutUsPage = () => {
           {/* Image */}
           <div className="overflow-hidden rounded-3xl">
             <img
-              src="src/assets/aboutus/mission.jpg"
+              src="/images/aboutus/mission.jpg"
               alt="HCV Fashion Hub"
               className="w-full h-112.5 object-cover"
             />

@@ -2,9 +2,9 @@ import React from 'react'
 import { useState, useEffect } from 'react'
 
 const images = [
-  "/src/assets/homepage/homepage-hero1.png",
-  "/src/assets/homepage/homepage-hero2.jpg",
-  "/src/assets/homepage/homepage-hero3.jpg",
+  "/images/homepage/homepage-hero1.png",
+  "/images/homepage/homepage-hero2.jpg",
+  "/images/homepage/homepage-hero3.jpg",
 ];
 
 const HeroSlider = () => {
