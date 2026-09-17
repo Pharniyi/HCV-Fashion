@@ -33,23 +33,23 @@ const categories = [
 const arrivals = [
   {
     name: "Tees",
-    price: "#5,000.00",
+    price: "₦5,000.00",
     image: "/src/assets/homepage/Tees.jpg",
   },
   {
     name: "Pant Trouser",
-    price: "#10,000.00",
+    price: "₦10,000.00",
     image: "/src/assets/homepage/pant trouser.jpg",
   },
   {
     name: "Top",
-    price: "#9,000.00",
+    price: "₦9,000.00",
     image: "/src/assets/homepage/bodycon top.jpg",
   },
 
   {
     name: "Relaxed Blazer",
-    price: "#20,000.00",
+    price: "₦20,000.00",
     image: "/src/assets/homepage/blazer.jpg",
   },
 ];

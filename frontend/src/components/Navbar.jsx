@@ -1,5 +1,5 @@
-import React from "react";
-import { Link, NavLink } from "react-router-dom";
+import React, { useState } from "react";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 import {
   LogOut,
   MessageSquare,
@@ -12,6 +12,17 @@ import { useAuthStore } from "../store/useAuthStore";
 
 const Navbar = () => {
   const { logout, authUser } = useAuthStore();
+  const navigate = useNavigate();
+  const [isProfileMenuOpen, setIsProfileMenuOpen] = useState(false);
+
+  const handleLogout = async () => {
+    const success = await logout();
+    setIsProfileMenuOpen(false);
+
+    if (success) {
+      navigate("/login");
+    }
+  };
 
   return (
     //<header className='bg-base-100 border-b border-base-300 fixed w-full top-0 z-40 backdrop'>
@@ -142,16 +153,43 @@ const Navbar = () => {
               <ShoppingCart size={18} />
             </button>
 
-            <Link
-              to={"/profile"}
-              className="hover:text-gray-600 transition cursor-pointer"
-            >
-              <User className="size-5" />
-            </Link>
+            <div className="relative">
+              <button
+                type="button"
+                onClick={() => setIsProfileMenuOpen((prev) => !prev)}
+                className="hover:text-gray-600 transition cursor-pointer"
+                aria-label="Open profile menu"
+              >
+                <User className="size-5" />
+              </button>
 
-            {/*<button className='flex gap-2 items-center' onClick={logout}>
-              <LogOut className='size-5'/>
-            </button>*/}
+              {isProfileMenuOpen && (
+                <div className="absolute right-0 top-full mt-3 w-48 rounded-md border border-gray-200 bg-white p-2 shadow-lg z-50">
+                  <Link
+                    to="/profile"
+                    onClick={() => setIsProfileMenuOpen(false)}
+                    className="block rounded px-3 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                  >
+                    Profile
+                  </Link>
+                  <Link
+                    to="/settings"
+                    onClick={() => setIsProfileMenuOpen(false)}
+                    className="block rounded px-3 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                  >
+                    Settings
+                  </Link>
+                  <button
+                    type="button"
+                    onClick={handleLogout}
+                    className="flex w-full items-center gap-2 rounded px-3 py-2 text-left text-sm text-red-600 hover:bg-red-50"
+                  >
+                    <LogOut className="size-4" />
+                    Sign Out
+                  </button>
+                </div>
+              )}
+            </div>
           </div>
         </div>
       </div>
