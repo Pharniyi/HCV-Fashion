@@ -222,25 +222,27 @@ const KidsPage = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10">
           {sortedProducts.slice(0, visibleProducts).map((product) => (
             <article key={product.id} className="group cursor-pointer">
+              <Link to={`/product/${product.id}`} state={{ product }} className="block">
                 <div className="relative mb-3 aspect-[0.78] overflow-hidden bg-[#eeeae4]">
-                <img
-                  src={product.image}
-                  alt={product.name}
-                  className="h-full w-full object-cover transition duration-700 ease-out group-hover:scale-[1.03]"
-                />
+                  <img
+                    src={product.image}
+                    alt={product.name}
+                    className="h-full w-full object-cover transition duration-700 ease-out group-hover:scale-[1.03]"
+                  />
 
-                {/* Quick Add */}
-                <button className="absolute bottom-0 left-0 right-0 translate-y-full bg-black py-3 text-[10px] font-semibold uppercase tracking-[0.15em] text-white transition-transform duration-300 group-hover:translate-y-0">
-                  Quick Add
-                </button>
-              </div>
+                  {/* Quick Add */}
+                  <button className="absolute bottom-0 left-0 right-0 translate-y-full bg-black py-3 text-[10px] font-semibold uppercase tracking-[0.15em] text-white transition-transform duration-300 group-hover:translate-y-0">
+                    Quick Add
+                  </button>
+                </div>
 
-              <p className="mt-4 text-xs uppercase tracking-widest text-gray-500">
-                {product.category}
-              </p>
-              <h3 className="mt-4 text-sm">{product.name}</h3>
+                <p className="mt-4 text-xs uppercase tracking-widest text-gray-500">
+                  {product.category}
+                </p>
+                <h3 className="mt-4 text-sm">{product.name}</h3>
 
-              <p className="mt-1 text-xl">{product.price}</p>
+                <p className="mt-1 text-xl">{product.price}</p>
+              </Link>
             </article>
           ))}
         </div>

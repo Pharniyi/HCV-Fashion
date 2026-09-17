@@ -1,5 +1,6 @@
 import React from "react";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import Footer from "../components/Footer";
 
 const products = [
@@ -309,30 +310,32 @@ const NewArrivalsPage = () => {
               <div className="grid grid-cols-2 gap-x-4 gap-y-10 md:grid-cols-3 md:gap-x-5">
                 {sortedProducts.slice(0, visibleProducts).map((product) => (
                   <article key={product.id} className="group cursor-pointer">
-                    {/* Product Image */}
-                    <div className="relative mb-3 aspect-[0.78] overflow-hidden bg-[#eeeae4]">
-                      <img
-                        src={`${product.image}`}
-                        alt={product.name}
-                        className="h-full w-full object-cover transition duration-700 ease-out group-hover:scale-[1.03]"
-                      />
+                    <Link to={`/product/${product.id}`} state={{ product }} className="block">
+                      {/* Product Image */}
+                      <div className="relative mb-3 aspect-[0.78] overflow-hidden bg-[#eeeae4]">
+                        <img
+                          src={`${product.image}`}
+                          alt={product.name}
+                          className="h-full w-full object-cover transition duration-700 ease-out group-hover:scale-[1.03]"
+                        />
 
-                      {/* Quick Add */}
-                      <button className="absolute bottom-0 left-0 right-0 translate-y-full bg-black py-3 text-[10px] font-semibold uppercase tracking-[0.15em] text-white transition-transform duration-300 group-hover:translate-y-0">
-                        Quick Add
-                      </button>
-                    </div>
+                        {/* Quick Add */}
+                        <button className="absolute bottom-0 left-0 right-0 translate-y-full bg-black py-3 text-[10px] font-semibold uppercase tracking-[0.15em] text-white transition-transform duration-300 group-hover:translate-y-0">
+                          Quick Add
+                        </button>
+                      </div>
 
-                    {/* Product Details */}
-                    <div>
-                      <h2 className="mb-2 text-[13px] font-medium text-gray-900 md:text-[14px]">
-                        {product.name}
-                      </h2>
+                      {/* Product Details */}
+                      <div>
+                        <h2 className="mb-2 text-[13px] font-medium text-gray-900 md:text-[14px]">
+                          {product.name}
+                        </h2>
 
-                      <p className="text-[15px] font-medium text-black">
-                        {formatPrice(product.price)}
-                      </p>
-                    </div>
+                        <p className="text-[15px] font-medium text-black">
+                          {formatPrice(product.price)}
+                        </p>
+                      </div>
+                    </Link>
                   </article>
                 ))}
               </div>

@@ -70,8 +70,8 @@ const SignUpPage = () => {
                 {/* logo)*/}
                 <div className='text-center'>
                     <div className='flex flex-col items-center gap-3'>
-                        <div className='size-22 bg-primary/10 rounded-lg p-2 flex items-center justify-center'>
-                           <img src="HCV_Logo.png" alt="HCV" className='size-20' />
+                        <div className='size-22 bg-primary/10 rounded-lg p-2 flex items-center justify-center overflow-hidden'>
+                           <img src="/HCV_Logo.png" alt="HCV Fashion Hub logo" className='size-20 object-contain' />
                         </div>
                         <h1 className='text-2xl font-bold mt-2'>HCV Fashion Hub</h1>
                         <p className='text-base-content/60'>CURATED LUXURY</p>

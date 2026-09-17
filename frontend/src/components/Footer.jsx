@@ -13,8 +13,8 @@ const Footer = () => {
                 to="/"
                 className="flex items-center gap-1 hover:opacity-80 transition-all"
               >
-                <div className="size-12 rounded-lg bg-primary/10 flex items-center justify-center">
-                  <img src="HCV_Logo.png" alt="" />
+                <div className="size-12 rounded-lg bg-primary/10 flex items-center justify-center overflow-hidden">
+                  <img src="/HCV_Logo.png" alt="HCV Fashion Hub logo" className="h-full w-full object-contain" />
                 </div>
                 <h1 className="text-xl font-bold text-[#d4af37]">
                   HCV Fashion Hub
