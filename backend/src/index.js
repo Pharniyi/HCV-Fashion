@@ -18,7 +18,7 @@ const _dirname = path.resolve() //to get the absolute path of the current direct
 app.use(express.json()) // Middleware to parse JSON request bodies, to extract the json data from the body 
 app.use(cookieParser()); // Middleware to parse cookies from incoming requests, to extract the cookies from the request headers and make them available in the req.cookies object for further processing in the application.
 app.use(cors({ //to configure CORS settings for the application, allowing it to handle cross-origin requests from the specified origin and enabling credentials to be included in those requests.
-  origin: "http://localhost:5173", //to specify the allowed origin for cross-origin requests, allowing only requests from http://localhost:5173 to access the resources of the backend server. This is important for security reasons to prevent unauthorized access from other origins.
+  origin: process.env.FRONTEND_URL, //to specify the allowed origin for cross-origin requests, allowing only requests from the frontend URL to access the resources of the backend server. This is important for security reasons to prevent unauthorized access from other origins.
   credentials: true, //to allow cookies and other credentials to be included in cross-origin requests, enabling the frontend application to send authentication tokens or session cookies along with requests to the backend server, which is necessary for maintaining user sessions and authentication state across different origins.
 }))
 

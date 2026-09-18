@@ -6,7 +6,7 @@ const app = express() //to create an instance of the Express application, which 
 const server = http.createServer(app) //to create an HTTP server instance using the http module, and pass the Express
 const io = new Server(server, { //to create a new Socket.IO server instance and attach it to the HTTP server. This allows the Socket.IO server to handle WebSocket connections alongside regular HTTP requests. The second argument is an options object where we can configure CORS settings for the Socket.IO server, allowing it to accept connections from specified origins.
     cors: {
-        origin: ["http://localhost:5173"], //to specify the allowed origin for cross-origin requests to the Socket.IO server, allowing only requests from http://localhost:5173 to establish WebSocket connections. This is important for security reasons to prevent unauthorized access from other origins.
+        origin: process.env.FRONTEND_URL, //to specify the allowed origin for cross-origin requests to the Socket.IO server, allowing only requests from the frontend URL to establish WebSocket connections. This is important for security reasons to prevent unauthorized access from other origins.
     }
 })
 
